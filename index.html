@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Stylight Frontend Developer Task</title>
+    <!-- Put your own styles into this file. -->
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div>Stylight Currency Converter</div>
+    <span>
+        <form action="./">
+                <label for="amount">Amount:</label><br>
+                <input type="text" id="amount"><br>
+                <label for="source">Source currency:</label><br>
+                <input type="text" value="EUR" id="source" autocomplete="off" list="validSymbols"><br>
+                <label for="target">Target currency:</label><br>
+                <input type="text" value="USD" id="target" autocomplete="off" list="validSymbols"><br>
+                <button id="submit">Submit</button>
+        </form>
+        <datalist id="validSymbols">
+            <option>EUR</option>
+            <option>USD</option>
+            <option>JPY</option>
+        </datalist>
+        <p>Result:</p>
+        
+    </span>
+
+    <!-- Use the `axios` library for making Ajax requests. -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Put your own JavaScript into this file. -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
