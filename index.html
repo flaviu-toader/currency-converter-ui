@@ -10,24 +10,40 @@
 </head>
 
 <body>
-    <div>Stylight Currency Converter</div>
-    <span>
-        <form action="./">
-                <label for="amount">Amount:</label><br>
-                <input type="text" id="amount"><br>
-                <label for="source">Source currency:</label><br>
-                <input type="text" value="EUR" id="source" autocomplete="off" list="validSymbols"><br>
-                <label for="target">Target currency:</label><br>
-                <input type="text" value="USD" id="target" autocomplete="off" list="validSymbols"><br>
+    <div class=header>Stylight Currency Converter</div>
+    <span id="converter">
+        <form id="inputForm" action="./">
+            <div class="row">
+                <div class="col-45">
+                    <select id="source">
+                        <option selected value="EUR">Euros</option>
+                        <option value="USD">American Dollars</option>
+                        <option value="JPY">Japanese Yen</option>
+                    </select>
+                </div>
+                <div class="col-5">
+                    <label>to</label>
+                </div>
+                <div class="col-45">
+                    <select id="target">
+                        <option value="EUR">Euros</option>
+                        <option value="USD">American Dollars</option>
+                        <option selected value="JPY">Japanese Yen</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <input type="number" min="0" id="amount" placeholder="Amount" required>
+            </div>
+            <br>
+            <div class="row">
                 <button id="submit">Submit</button>
+            </div>
         </form>
-        <datalist id="validSymbols">
-            <option>EUR</option>
-            <option>USD</option>
-            <option>JPY</option>
-        </datalist>
-        <p>Result:</p>
-        
+        <div id="result" class="hidden result">
+            <input type="text" readonly placeholder="Result">
+        </div>
     </span>
 
     <!-- Use the `axios` library for making Ajax requests. -->
